@@ -1,6 +1,6 @@
 import 'package:bloc/bloc.dart';
-import 'package:meow_too/bloc/pets_bloc/pets.actions.dart';
-import 'package:meow_too/bloc/pets_bloc/pets.state.dart';
+import 'package:meow_too/bloc/pets_bloc/pets_event.dart';
+import 'package:meow_too/bloc/pets_bloc/pets_state.dart';
 import 'package:meow_too/enums/enums.dart';
 import 'package:meow_too/model/pet.model.dart';
 import 'package:meow_too/repositories/pets.repository.dart';

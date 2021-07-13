@@ -16,8 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
-        BlocProvider(create: (context) => RegisterBloc(userRepository: UserRepository()),
-        child: RegisterForm(),)
+        BlocProvider(create: (context) => RegisterBloc(userRepository: UserRepository()),)
       ],
       child: MaterialApp(
         theme: ThemeData(

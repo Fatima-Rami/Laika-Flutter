@@ -18,10 +18,10 @@ class RegisterState extends Equatable {
       required this.lastName,
       required this.email,
       required this.password,
-      this.formStatus = const InitialFormStatus()});
+      required this.formStatus});
 
   static RegisterState initialState() =>
-  RegisterState(firstName: "", lastName: "", email: "", password: "");
+  RegisterState(firstName: "", lastName: "", email: "", password: "", formStatus: InitialFormStatus());
 
 
   RegisterState copyWith(
@@ -39,5 +39,5 @@ class RegisterState extends Equatable {
   }
 
   @override
-  List<Object> get props => [firstName, lastName, email, password];
+  List<Object> get props => [firstName, lastName, email, password, formStatus];
 }

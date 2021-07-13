@@ -26,8 +26,6 @@ class RegisterBloc extends Bloc<RegisterEvent, RegisterState> {
     } else if (event is RegisterEmailChanged) {
       final email = event.email;
       yield this.state.copyWith(email: email);
-      print('PRINT STATE DEBUT email ********************************************************** ');
-      print(email);
 
     } else if (event is RegisterPasswordChanged) {
       final password = event.password;
@@ -44,7 +42,10 @@ class RegisterBloc extends Bloc<RegisterEvent, RegisterState> {
           state.email,
           state.password
         );
-        yield state.copyWith(formStatus: SubmissionSuccess());
+        const formStatus = SubmissionSuccess();
+        yield state.copyWith(formStatus: formStatus);
+        print("*************** STATE *********************");
+        print(state.formStatus);
       } catch (error) {
         Exception e = new Exception(error);
         yield state.copyWith(formStatus: SubmissionFailed(e));
